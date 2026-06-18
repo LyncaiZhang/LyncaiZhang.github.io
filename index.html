@@ -9,7 +9,7 @@
     />
     <title>Lingkai Zhang | Academic Homepage</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20260619-3" />
   </head>
   <body>
     <canvas id="constellation" aria-hidden="true"></canvas>
@@ -22,8 +22,8 @@
     </header>
 
     <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
-      <a href="#about" data-i18n="nav.about">About</a>
-      <a href="#status" data-i18n="nav.status">Status</a>
+      <a href="#about" data-i18n="nav.about">关于</a>
+      <a href="#status" data-i18n="nav.status">时间线</a>
       <a href="#research" data-i18n="nav.research">研究</a>
       <a href="#publications" data-i18n="nav.publications">成果</a>
       <a href="#writing" data-i18n="nav.writing">写作</a>
@@ -35,8 +35,24 @@
         <div class="profile-card">
           <div class="avatar">
             <img src="assets/avatar.jpg" alt="Lingkai Zhang 张凌恺" />
+            <svg class="avatar-network" viewBox="0 0 132 142" preserveAspectRatio="none" aria-hidden="true">
+              <line x1="22" y1="32" x2="52" y2="22"></line>
+              <line x1="52" y1="22" x2="92" y2="36"></line>
+              <line x1="28" y1="78" x2="64" y2="58"></line>
+              <line x1="64" y1="58" x2="104" y2="82"></line>
+              <line x1="42" y1="104" x2="92" y2="98"></line>
+              <line x1="92" y1="36" x2="104" y2="82"></line>
+              <circle cx="22" cy="32" r="2.4"></circle>
+              <circle cx="52" cy="22" r="2"></circle>
+              <circle cx="92" cy="36" r="2.5"></circle>
+              <circle cx="28" cy="78" r="2"></circle>
+              <circle cx="64" cy="58" r="2.8"></circle>
+              <circle cx="104" cy="82" r="2.2"></circle>
+              <circle cx="42" cy="104" r="2.4"></circle>
+              <circle cx="92" cy="98" r="2"></circle>
+            </svg>
           </div>
-          <p class="eyebrow" data-i18n="profile.role">Doctoral Researcher</p>
+          <p class="eyebrow profile-role" data-i18n="profile.role">知识产权学博士研究生</p>
           <h1 data-i18n="profile.name">Lingkai Zhang</h1>
           <p class="name-cn" data-i18n="profile.nameCn">张凌恺</p>
           <p class="affiliation" data-i18n="profile.affiliation">
@@ -47,12 +63,17 @@
           </p>
 
           <div class="profile-actions" aria-label="Academic links">
-            <a href="mailto:jamelincoln1012@foxmail.com" data-i18n="links.email">Email</a>
-            <a href="https://github.com/LyncaiZhang" data-i18n="links.github">GitHub</a>
-            <a href="https://orcid.org/0000-0001-5621-4479" data-i18n="links.orcid">ORCID</a>
-            <a href="#" data-i18n="links.scholar">Scholar Soon</a>
-            <a href="#" data-i18n="links.linkedin">LinkedIn Soon</a>
-            <a href="#" data-i18n="links.cv">CV Soon</a>
+            <button class="link-pill email-trigger" type="button" aria-expanded="false" aria-controls="email-panel" data-i18n="links.email">邮箱</button>
+            <a class="link-pill" href="https://github.com/LyncaiZhang" data-i18n="links.github">GitHub</a>
+            <a class="link-pill" href="https://orcid.org/0000-0001-5621-4479" data-i18n="links.orcid">ORCID</a>
+            <a class="link-pill" href="#" data-i18n="links.scholar">谷歌学者待更新</a>
+            <a class="link-pill" href="#" data-i18n="links.linkedin">LinkedIn 待更新</a>
+            <a class="link-pill" href="#" data-i18n="links.cv">CV 待更新</a>
+          </div>
+          <div id="email-panel" class="email-panel" hidden>
+            <span class="email-address">jamelincoln1012@foxmail.com</span>
+            <button class="copy-email" type="button" data-i18n="links.copyEmail">复制邮箱</button>
+            <span class="email-feedback" aria-live="polite"></span>
           </div>
 
           <div class="language-switch" aria-label="Language switch">
@@ -62,8 +83,8 @@
         </div>
 
         <nav class="side-nav" aria-label="Primary navigation">
-          <a href="#about" data-i18n="nav.about">About</a>
-          <a href="#status" data-i18n="nav.status">Status</a>
+          <a href="#about" data-i18n="nav.about">关于</a>
+          <a href="#status" data-i18n="nav.status">时间线</a>
           <a href="#research" data-i18n="nav.research">研究</a>
           <a href="#publications" data-i18n="nav.publications">成果</a>
           <a href="#writing" data-i18n="nav.writing">写作</a>
@@ -73,7 +94,7 @@
 
       <section class="content-column">
         <section id="about" class="hero-section section-block">
-          <p class="eyebrow" data-i18n="hero.kicker">Minimal Academic Website</p>
+          <p class="eyebrow" data-i18n="hero.kicker">学术主页</p>
           <h2 data-i18n="hero.title">
             张凌恺 | Lingkai (Lyncai) Zhang
           </h2>
@@ -82,15 +103,15 @@
           </p>
           <div class="hero-grid" aria-label="Research summary">
             <div>
-              <span data-i18n="stats.fieldLabel">Research Field</span>
-              <strong data-i18n="stats.field">Intellectual Property Management</strong>
+              <span data-i18n="stats.fieldLabel">研究领域</span>
+              <strong data-i18n="stats.field">知识产权管理</strong>
             </div>
             <div>
-              <span data-i18n="stats.methodLabel">Methods</span>
-              <strong data-i18n="stats.method">fsQCA / NLP / Case Study</strong>
+              <span data-i18n="stats.methodLabel">研究方法</span>
+              <strong data-i18n="stats.method">专利分析 / 文献计量 / 网络分析</strong>
             </div>
             <div>
-              <span data-i18n="stats.openLabel">Motto</span>
+              <span data-i18n="stats.openLabel">格言</span>
               <strong data-i18n="stats.open">仰望星空，脚踏实地</strong>
             </div>
           </div>
@@ -98,10 +119,10 @@
 
         <section id="status" class="section-block">
           <div class="section-heading">
-            <p class="eyebrow" data-i18n="status.kicker">Academic Status</p>
-            <h2 data-i18n="status.title">Doctoral Progress</h2>
+            <p class="eyebrow" data-i18n="status.kicker">时间线</p>
+            <h2 data-i18n="status.title">教育与工作经历</h2>
             <p data-i18n="status.copy">
-              Current training, coursework, and dissertation progress.
+              从工程实践到知识产权管理研究的完整时间线。
             </p>
           </div>
           <div id="status-list" class="status-grid"></div>
@@ -109,7 +130,7 @@
 
         <section class="section-block">
           <div class="section-heading">
-            <p class="eyebrow" data-i18n="news.kicker">News</p>
+            <p class="eyebrow" data-i18n="news.kicker">动态</p>
             <h2 data-i18n="news.title">最新动态</h2>
           </div>
           <div id="news-list" class="news-list"></div>
@@ -120,8 +141,8 @@
 
         <section id="research" class="section-block">
           <div class="section-heading">
-            <p class="eyebrow" data-i18n="research.kicker">Research Map</p>
-            <h2 data-i18n="research.title">研究领域</h2>
+            <p class="eyebrow" data-i18n="research.kicker">研究兴趣</p>
+            <h2 data-i18n="research.title">研究兴趣</h2>
             <p data-i18n="research.copy">
               用少量主题卡片替代密集履历，让访问者迅速理解你的学术位置。
             </p>
@@ -131,7 +152,7 @@
 
         <section id="publications" class="section-block">
           <div class="section-heading">
-            <p class="eyebrow" data-i18n="publications.kicker">Publications</p>
+            <p class="eyebrow" data-i18n="publications.kicker">论文成果</p>
             <h2 data-i18n="publications.title">代表性成果</h2>
             <p data-i18n="publications.copy">
               中文刊物、英文论文、工作论文都可以陈列。重点是给每项成果一个清楚的问题、方法和贡献。
@@ -150,19 +171,19 @@
 
         <section id="writing" class="section-block">
           <div class="section-heading">
-            <p class="eyebrow" data-i18n="writing.kicker">Posts & Notes</p>
+            <p class="eyebrow" data-i18n="writing.kicker">研究札记</p>
             <h2 data-i18n="writing.title">研究札记</h2>
             <p data-i18n="writing.copy">
-              像 Lilian Weng 那样，把主页同时变成长期思考的索引。博士阶段可先放读书笔记、方法笔记和研究随笔。
+              俯仰无愧天地，褒贬自有春秋
             </p>
           </div>
           <div id="post-list" class="post-list"></div>
           <div class="wechat-card">
             <img src="assets/wechat-qrcode.jpg" alt="WeChat public account QR code" />
             <div>
-              <h3 data-i18n="wechat.title">WeChat Notes</h3>
+              <h3 data-i18n="wechat.title">微信公众号</h3>
               <p data-i18n="wechat.copy">
-                Scan the QR code to follow longer Chinese essays and research notes.
+                扫码关注公众号，后续用于发布中文研究札记、论文解读与学术成长记录。
               </p>
             </div>
           </div>
@@ -171,18 +192,16 @@
         <section id="contact" class="section-block contact-section">
           <div>
             <p class="eyebrow" data-i18n="contact.kicker">联系</p>
-            <h2 data-i18n="contact.title">联系我</h2>
+            <h2 data-i18n="contact.title">一起合作吧！</h2>
             <p data-i18n="contact.copy">
               如果你关注知识产权管理、大学技术转移、专利情报或科技成果转化，欢迎通过邮件联系。
             </p>
           </div>
-          <a class="primary-button" href="mailto:jamelincoln1012@foxmail.com" data-i18n="contact.button">
-            发送邮件
-          </a>
+          <span class="contact-email" data-i18n="contact.email">jamelincoln1012@foxmail.com</span>
         </section>
       </section>
     </main>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20260619-3"></script>
   </body>
 </html>

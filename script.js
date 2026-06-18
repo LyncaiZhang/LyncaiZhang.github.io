@@ -17,48 +17,49 @@ const content = {
       note: "知识产权管理、专利情报与科技成果转化研究。",
     },
     links: {
-      email: "Email",
-      cv: "CV Soon",
-      scholar: "Scholar Soon",
+      email: "邮箱",
+      copyEmail: "复制邮箱",
+      copyDone: "已复制",
+      cv: "CV 待更新",
+      scholar: "谷歌学者待更新",
       github: "GitHub",
       orcid: "ORCID",
-      linkedin: "LinkedIn Soon",
+      linkedin: "LinkedIn 待更新",
     },
     hero: {
-      kicker: "Academic Homepage",
+      kicker: "学术主页",
       title: "张凌恺 | Lingkai (Lyncai) Zhang",
       copy:
         "本人为知识产权管理方向博士研究生，研究聚焦明星科学家团队专利转化效能提升机制，关注科研声誉、团队网络、技术转移组织与创新生态如何共同影响高校专利的价值实现。",
     },
     stats: {
-      fieldLabel: "Research Field",
-      field: "Intellectual Property Management",
-      methodLabel: "Methods",
-      method: "Patent Analytics / Bibliometrics / Network Analysis",
-      openLabel: "Motto",
+      fieldLabel: "研究领域",
+      field: "知识产权管理",
+      methodLabel: "研究方法",
+      method: "专利分析 / 文献计量 / 网络分析",
+      openLabel: "格言",
       open: "仰望星空，脚踏实地",
     },
     status: {
-      kicker: "Timeline",
+      kicker: "时间线",
       title: "教育与工作经历",
       copy: "从工程实践到知识产权管理研究的完整时间线。",
     },
     news: {
-      kicker: "News",
+      kicker: "动态",
       title: "最新动态",
       showMore: "查看更多",
       showLess: "收起",
     },
     research: {
-      kicker: "Research Interests",
-      title: "研究方向",
-      copy: "围绕明星科学家团队、专利转化、技术转移评价和知识产权管理制度展开。",
+      kicker: "研究兴趣",
+      title: "研究兴趣",
+      copy: "围绕明星科学家团队、大科学设施、科技治理体系与区域国别研究展开。",
     },
     publications: {
-      kicker: "Publications",
+      kicker: "论文成果",
       title: "论文与成果",
-      copy:
-        "中文刊物以英文题名和英文贡献说明呈现，同时保留中文题名，便于国内外访问者快速理解研究贡献。",
+      copy: "中文刊物、学位论文与工作论文都可以陈列。重点是清楚呈现问题、方法和贡献。",
     },
     filters: {
       all: "全部",
@@ -67,10 +68,9 @@ const content = {
       thesis: "学位论文",
     },
     writing: {
-      kicker: "Posts & Notes",
+      kicker: "研究札记",
       title: "研究札记",
-      copy:
-        "这里预留公众号与研究笔记入口，后续可放置方法笔记、文献札记、论文写作和政策文本分析等内容。",
+      copy: "俯仰无愧天地，褒贬自有春秋",
     },
     wechat: {
       title: "微信公众号",
@@ -78,10 +78,10 @@ const content = {
     },
     contact: {
       kicker: "联系",
-      title: "联系我",
+      title: "一起合作吧！",
       copy:
         "如果你关注知识产权管理、大学技术转移、创新管理、专利情报、科学计量或产学研合作，欢迎通过邮件联系。",
-      button: "发送邮件",
+      email: "jamelincoln1012@foxmail.com",
     },
   },
   en: {
@@ -103,6 +103,8 @@ const content = {
     },
     links: {
       email: "Email",
+      copyEmail: "Copy email",
+      copyDone: "Copied",
       cv: "CV Soon",
       scholar: "Scholar Soon",
       github: "GitHub",
@@ -156,7 +158,7 @@ const content = {
       kicker: "Posts & Notes",
       title: "Research Notes",
       copy:
-        "This section is reserved for method notes, literature notes, academic writing reflections, and policy text analysis. The WeChat QR code links to future Chinese essays.",
+        "Live with a clear conscience before heaven and earth; let time judge praise and blame.",
     },
     wechat: {
       title: "WeChat Notes",
@@ -164,10 +166,10 @@ const content = {
     },
     contact: {
       kicker: "Contact",
-      title: "Contact",
+      title: "Let's Collaborate!",
       copy:
         "Please feel free to email me about intellectual property management, university technology transfer, innovation management, patent intelligence, scientometrics, or university-industry collaboration.",
-      button: "Email me",
+      email: "jamelincoln1012@foxmail.com",
     },
   },
 };
@@ -186,6 +188,12 @@ const data = {
         title: "上海应用技术大学硕士研究生",
         body:
           "管理科学与工程专业，研究方向为技术创新与知识产权管理。硕士学位论文聚焦集成电路产业颠覆性技术识别与培育。",
+      },
+      {
+        label: "2020.05 - 2021.06",
+        title: "职业探索与硕士阶段准备",
+        body:
+          "曾在腾讯、新东方等企业参与零散工作与职业探索，并在跨专业转换、城市迁移与研究方向选择中，为后续硕士阶段的学习和研究做准备。",
       },
       {
         label: "2019.07 - 2020.04",
@@ -230,7 +238,7 @@ const data = {
       },
       {
         date: "2025.11",
-        text: "在德国亚琛第二届中德研究生学术论坛汇报 star scientist teams 生命周期研究。",
+        text: "在德国亚琛第二届中德研究生学术论坛汇报明星科学家团队生命周期研究。",
       },
       {
         date: "2025.05",
@@ -239,168 +247,194 @@ const data = {
     ],
     topics: [
       {
-        title: "明星科学家团队与专利转化机制",
+        title: "明星科学家团队与科技成果转化效能",
         body:
-          "关注明星科学家及其科研团队在高校专利创造、价值识别、许可转让和产业化过程中的作用机制。重点分析科研声誉、团队结构、知识产权管理能力与技术转移服务如何共同影响专利转化效能。",
+          "关注高影响力科学家及其团队如何推动知识创造、专利产出和技术转移。重点分析科研声誉、团队结构、组织支持与知识产权管理能力如何共同影响科技成果转化效能。",
       },
       {
-        title: "专利情报与科技成果转化评价",
+        title: "大科学设施与科技治理体系",
         body:
-          "基于专利分析、文献计量和科研团队网络分析，构建科技成果转化潜力与转化绩效的识别框架。重点关注专利质量、技术关联、发明人合作网络、法律状态、转让许可和产业应用线索等指标。",
+          "关注大科学设施在国家创新体系、基础研究组织和科技治理现代化中的作用。希望从制度设计、资源配置、开放共享和责任治理等角度，理解重大科研平台如何支撑高水平科技自立自强。",
       },
       {
-        title: "知识产权管理与大学技术转移制度比较",
+        title: "区域国别学研究",
         body:
-          "关注高校、科研机构和技术转移办公室在专利布局、成果披露、许可谈判、企业合作和创业支持中的管理机制。希望通过中外比较研究，分析不同国家和高校创新生态如何影响科研成果转化效率。",
+          "关注不同国家和地区的科技创新制度、知识产权治理与产业发展路径。通过比较研究、政策文本分析和案例研究，探索跨区域科技合作与制度差异对创新绩效的影响。",
       },
     ],
     publications: [
       {
         title: "中国基础研究产出高质量专利了吗？——基于国家自然科学基金资助的证据",
-        cnTitle: "English title: Has Basic Research in China Produced High-Quality Patents? Evidence from National Natural Science Foundation Funding",
+        cnTitle: "Has Basic Research in China Produced High-Quality Patents? Evidence from National Natural Science Foundation Funding",
         authors: "常旭华, 喻诚搏, <strong>张凌恺</strong>",
         venue: "科学学与科学技术管理 / 2026, 47(03): 85-103",
         type: "journal featured",
         summary:
+          "基于国家自然科学基金资助项目关联发明专利，评估中国基础研究是否产出高质量专利，并讨论基础研究与专利质量之间的关系。",
+        enSummary:
           "This study evaluates invention patents linked to NSFC-funded projects and examines whether basic research produces high-quality patent outputs.",
         links: [{ label: "PDF", kind: "paper", href: "assets/papers/2026-basic-research-high-quality-patents.pdf" }],
       },
       {
         title: "国家科技治理体系现代化的理论建构及实现路径研究",
-        cnTitle: "English title: Research on the Theoretical Construction and Implementation Path of the Modernization of China's National Science and Technology Governance System",
+        cnTitle: "Research on the Theoretical Construction and Implementation Path of the Modernization of China's National Science and Technology Governance System",
         authors: "常旭华, <strong>张凌恺</strong>, 陈强",
         venue: "中国科技论坛 / 2026(01): 1-10",
         type: "journal featured",
         summary:
+          "围绕发展、安全与责任构建国家科技治理体系现代化的理论框架，并提出实现路径。",
+        enSummary:
           "The paper builds a theoretical framework for modernizing China's science and technology governance system around development, security, and responsibility.",
         links: [{ label: "PDF", kind: "paper", href: "assets/papers/2026-science-technology-governance-modernization.pdf" }],
       },
       {
         title: "颠覆性技术两阶段识别模型构建及应用——以人工智能为例",
-        cnTitle: "English title: Construction and Application of a Two-Stage Identification Model for Disruptive Technologies: A Case of Artificial Intelligence",
+        cnTitle: "Construction and Application of a Two-Stage Identification Model for Disruptive Technologies: A Case of Artificial Intelligence",
         authors: "孙珂, 江瑶, 陈旭, <strong>张凌恺</strong>",
         venue: "科技与经济 / 2026, 39(01)",
         type: "journal featured",
         summary:
+          "基于专利数据构建两阶段识别模型，结合熵权法、K-means 聚类和三维可视化识别人工智能领域颠覆性技术主题。",
+        enSummary:
           "The study develops a two-stage patent-based model using entropy weighting, K-means clustering, and 3D visualization to identify disruptive AI technology themes.",
         links: [{ label: "PDF", kind: "paper", href: "assets/papers/2026-disruptive-ai-two-stage.pdf" }],
       },
       {
         title: "未来技术两阶段定量识别模型的构建与应用",
-        cnTitle: "English title: Construction and Application of Two-Stage Quantitative Identification Model for Future Technology",
+        cnTitle: "Construction and Application of Two-Stage Quantitative Identification Model for Future Technology",
         authors: "江瑶, 吴宇凡, 陈旭, <strong>张凌恺</strong>",
         venue: "情报杂志 / 2025, 44(08): 127-135, 117",
         type: "journal featured",
         summary:
+          "结合专利筛选与 BTM 主题挖掘方法，识别量子信息领域未来技术主题。",
+        enSummary:
           "The paper combines patent screening and BTM topic mining to identify future technology themes in quantum information.",
         links: [{ label: "PDF", kind: "paper", href: "assets/papers/2025-future-technology-two-stage.pdf" }],
       },
       {
         title: "基于“突变—演化”模型的集成电路产业颠覆性技术识别与培育研究",
-        cnTitle: "English title: Research on Identifying and Cultivating Disruptive Technologies in the IC Industry under the Mutation-Evolution Model",
+        cnTitle: "Research on Identifying and Cultivating Disruptive Technologies in the IC Industry under the Mutation-Evolution Model",
         authors: "<strong>张凌恺</strong>",
         venue: "Master's Thesis, Shanghai Institute of Technology / 2024",
         type: "thesis featured",
         summary:
+          "构建“突变—演化”模型，用于识别与培育集成电路产业中的颠覆性技术。",
+        enSummary:
           "This thesis develops a mutation-evolution model for identifying and cultivating disruptive technologies in the integrated circuit industry.",
         links: [{ label: "PDF", kind: "paper", href: "assets/papers/2024-thesis-ic-disruptive-technology.pdf" }],
       },
       {
         title: "“卡脖子”技术甄别模型构建及应用——以工业软件为例",
-        cnTitle: "English title: Construction and Application of the Bottleneck Technology Identification Model: A Case of the Industrial Software Industry",
+        cnTitle: "Construction and Application of the Bottleneck Technology Identification Model: A Case of the Industrial Software Industry",
         authors: "陈旭, 江瑶, 熊焰, <strong>张凌恺</strong>",
         venue: "情报杂志 / 2024, 43(04): 106-113, 95",
         type: "journal",
         summary:
+          "基于专利数据提出 V-G-M-B 框架，用于识别工业软件领域的“卡脖子”技术。",
+        enSummary:
           "The paper proposes a V-G-M-B framework to identify bottleneck technologies in industrial software using patent data.",
         links: [{ label: "PDF", kind: "paper", href: "assets/papers/2024-bottleneck-industrial-software.pdf" }],
       },
       {
         title: "多维特征视角下未来技术识别模型构建及应用",
-        cnTitle: "English title: Construction of Future Technology Identification Model and Its Application: From the Perspective of Multidimensional Features",
+        cnTitle: "Construction of Future Technology Identification Model and Its Application: From the Perspective of Multidimensional Features",
         authors: "江瑶, 陈旭, <strong>张凌恺</strong>",
         venue: "情报杂志 / 2024, 43(07): 104-111, 137",
         type: "journal",
         summary:
+          "整合多维指标与博弈论组合赋权方法，识别芯片材料领域未来技术主题。",
+        enSummary:
           "The study identifies future technology themes in chip materials by integrating multidimensional indicators and game-theoretic combined weighting.",
         links: [{ label: "PDF", kind: "paper", href: "assets/papers/2024-future-technology-multidimensional.pdf" }],
       },
       {
         title: "基于“突变—演化”模型的颠覆性技术识别方法及应用",
-        cnTitle: "English title: Disruptive Technology Identification Method and Application Based on the Mutation-Evolution Model",
+        cnTitle: "Disruptive Technology Identification Method and Application Based on the Mutation-Evolution Model",
         authors: "熊焰, <strong>张凌恺</strong>, 陈旭, 江瑶",
         venue: "情报杂志 / 2023, 42(12): 119-126, 152",
         type: "journal",
         summary:
+          "构建“突变—演化”模型，识别集成电路材料领域的颠覆性技术主题。",
+        enSummary:
           "The paper constructs a mutation-evolution model to identify disruptive technology themes in integrated circuit materials.",
         links: [{ label: "PDF", kind: "paper", href: "assets/papers/2023-mutation-evolution-disruptive-technology.pdf" }],
       },
       {
         title: "基于专利计量的全球量子信息技术发展态势研究",
-        cnTitle: "English title: Research on Global Quantum Information Technology Development Trends Based on Patent Bibliometrics",
+        cnTitle: "Research on Global Quantum Information Technology Development Trends Based on Patent Bibliometrics",
         authors: "江瑶, 陈旭, <strong>张凌恺</strong>",
         venue: "创新科技 / 2023, 23(11): 83-92",
         type: "journal",
         summary:
+          "通过专利计量、空间布局和合作网络分析，刻画全球量子信息技术发展态势。",
+        enSummary:
           "The article maps global quantum information technology trends through patent bibliometrics, spatial layout, and collaboration networks.",
         links: [{ label: "PDF", kind: "paper", href: "assets/papers/2023-quantum-information-patent-analysis.pdf" }],
       },
       {
         title: "专利视域下“卡脖子”技术三阶段识别研究",
-        cnTitle: "English title: Research on the Three-Stage Identification of Bottleneck Technologies from the Perspective of Patents",
+        cnTitle: "Research on the Three-Stage Identification of Bottleneck Technologies from the Perspective of Patents",
         authors: "江瑶, 陈旭, <strong>张凌恺</strong>",
         venue: "情报杂志 / 2023, 42(10): 132-139, 55",
         type: "journal",
         summary:
+          "从专利视角提出三阶段定量模型，用于识别关键核心技术中的“卡脖子”问题。",
+        enSummary:
           "The paper proposes a three-stage quantitative model for identifying bottleneck technologies from patent data.",
         links: [{ label: "PDF", kind: "paper", href: "assets/papers/2023-patent-bottleneck-three-stage.pdf" }],
       },
       {
         title: "专利视域下“卡脖子”技术三阶段识别研究——以芯片材料为例",
-        cnTitle: "English title: Three-Stage Identification of Bottleneck Technologies from the Perspective of Patents: A Case of Chip Materials",
+        cnTitle: "Three-Stage Identification of Bottleneck Technologies from the Perspective of Patents: A Case of Chip Materials",
         authors: "江瑶, 陈旭, <strong>张凌恺</strong>",
         venue: "情报杂志 / Online First, 2023",
         type: "journal",
         summary:
+          "将三阶段专利识别模型应用于芯片材料领域，识别相关“卡脖子”技术。",
+        enSummary:
           "This online-first version applies a three-stage patent-based identification model to bottleneck technologies in chip materials.",
         links: [{ label: "PDF", kind: "paper", href: "assets/papers/2023-patent-bottleneck-chip-materials-online.pdf" }],
       },
       {
         title: "关键核心技术“卡脖子”问题的识别及应用：以AI芯片为例",
-        cnTitle: "English title: Identification and Application of Bottleneck Issues in Key Core Technologies: Taking AI Chips as an Example",
+        cnTitle: "Identification and Application of Bottleneck Issues in Key Core Technologies: Taking AI Chips as an Example",
         authors: "陈旭, 江瑶, 熊焰, <strong>张凌恺</strong>",
         venue: "中国科技论坛 / 2023(09): 17-27",
         type: "journal",
         summary:
+          "结合定量与定性方法，识别 AI 芯片关键核心技术中的“卡脖子”问题。",
+        enSummary:
           "The study combines quantitative and qualitative approaches to identify bottleneck issues in AI chip technologies.",
         links: [{ label: "PDF", kind: "paper", href: "assets/papers/2023-bottleneck-ai-chip.pdf" }],
       },
       {
         title: "基于专利维度的关键核心技术“卡脖子”问题识别与分析——以集成电路产业为例",
-        cnTitle: "English title: Identification and Analysis of Bottleneck Problems in Key Core Technologies Based on Patent Dimensions: A Case of the Integrated Circuit Industry",
+        cnTitle: "Identification and Analysis of Bottleneck Problems in Key Core Technologies Based on Patent Dimensions: A Case of the Integrated Circuit Industry",
         authors: "陈旭, 江瑶, 熊焰, <strong>张凌恺</strong>",
         venue: "情报杂志 / 2023, 42(08): 83-89, 19",
         type: "journal",
         summary:
+          "基于专利指标构建两阶段金字塔模型，用于识别集成电路产业关键核心技术“卡脖子”问题。",
+        enSummary:
           "The paper develops a two-stage pyramid model to identify bottleneck problems in integrated circuit technologies using patent indicators.",
         links: [{ label: "PDF", kind: "paper", href: "assets/papers/2023-bottleneck-integrated-circuit.pdf" }],
       },
     ],
     posts: [
       {
-        date: "Method Notes",
-        title: "Patent Analytics and Technology Identification",
-        body: "Future notes on patent search, indicator design, technology topic mapping, and validation strategies.",
+        date: "方法笔记",
+        title: "专利分析与技术识别",
+        body: "后续记录专利检索、指标设计、技术主题识别和验证策略等方法经验。",
       },
       {
-        date: "Reading Notes",
-        title: "Star Scientists, Team Science, and Technology Transfer",
-        body: "Concept notes on scientific reputation, team lifecycle, inventor networks, and university technology transfer.",
+        date: "文献札记",
+        title: "明星科学家、团队科学与技术转移",
+        body: "整理科研声誉、团队生命周期、发明人网络和大学技术转移相关概念与文献。",
       },
       {
-        date: "Writing Notes",
-        title: "Academic Writing and Research Design",
-        body: "Reflections on dissertation framing, Chinese-English academic expression, and mixed-method research design.",
+        date: "写作札记",
+        title: "学术写作与研究设计",
+        body: "记录博士论文框架、中文学术表达、英文摘要写作和混合方法研究设计的思考。",
       },
     ],
   },
@@ -417,6 +451,12 @@ const data = {
         title: "Master's Student, Shanghai Institute of Technology",
         body:
           "Major: Management Science and Engineering. Research focus: technology innovation and intellectual property management; thesis on identifying and cultivating disruptive technologies in the IC industry.",
+      },
+      {
+        label: "May 2020 - Jun 2021",
+        title: "Career Exploration and Preparation for Master's Study",
+        body:
+          "Took part in flexible work and career exploration with companies including Tencent and New Oriental, while preparing for a cross-disciplinary transition, relocation, and the next stage of graduate study.",
       },
       {
         label: "Jul 2019 - Apr 2020",
@@ -471,19 +511,19 @@ const data = {
     ],
     topics: [
       {
-        title: "Star Scientist Teams and Patent Commercialization Mechanisms",
+        title: "Star Scientist Teams and Technology Commercialization Performance",
         body:
-          "This research examines how star scientists and their teams contribute to academic patent creation, value recognition, licensing, and commercialization. It focuses on how scientific reputation, team structure, IP management capabilities, and technology transfer support jointly shape patent commercialization performance.",
+          "This research examines how high-impact scientists and their teams contribute to knowledge creation, patenting, and technology transfer. It focuses on how scientific reputation, team structure, organizational support, and IP management capabilities jointly shape commercialization performance.",
       },
       {
-        title: "Patent Intelligence and Technology Transfer Evaluation",
+        title: "Large-Scale Scientific Facilities and Science and Technology Governance",
         body:
-          "This research uses patent analytics, bibliometrics, and inventor-team network analysis to evaluate the commercialization potential and performance of scientific and technological achievements. It focuses on patent quality, technological relevance, inventor networks, legal status, licensing, assignment, and industrial application signals.",
+          "This research explores the role of large-scale scientific facilities in national innovation systems, basic research organization, and governance modernization. It considers institutional design, resource allocation, open access, and responsible governance in major research platforms.",
       },
       {
-        title: "IP Management and Comparative University Technology Transfer Systems",
+        title: "Area Studies and Country Studies",
         body:
-          "This research explores how universities, research institutes, and technology transfer offices manage patent portfolios, invention disclosure, licensing negotiation, industry collaboration, and spin-off support. Through comparative studies, it examines how national and institutional innovation ecosystems influence academic technology transfer efficiency.",
+          "This research focuses on science, technology, innovation, and IP governance across countries and regions. Through comparative analysis, policy text analysis, and case studies, it examines how institutional differences and cross-regional cooperation influence innovation outcomes.",
       },
     ],
     publications: [],
@@ -507,15 +547,17 @@ const data = {
   },
 };
 
-data.en.publications = data.zh.publications.map((item) => ({
+data.en.publications = data.zh.publications.map(({ enSummary, ...item }) => ({
   ...item,
-  title: item.cnTitle.replace("English title: ", ""),
+  title: item.cnTitle,
   cnTitle: item.title,
+  summary: enSummary || item.summary,
 }));
 
 let currentLang = "zh";
 let showAllNews = false;
 let activeFilter = "all";
+const emailAddress = "jamelincoln1012@foxmail.com";
 
 const t = (path) => path.split(".").reduce((value, key) => value?.[key], content[currentLang]) || "";
 
@@ -618,7 +660,6 @@ function renderPublications() {
           <div class="publication-body">
             <span class="publication-meta">${item.venue}</span>
             <h3>${item.title}</h3>
-            <p class="publication-cn">${item.cnTitle}</p>
             <p>${item.authors}</p>
             <p>${item.summary}</p>
             <div class="publication-tags">
@@ -656,11 +697,59 @@ function renderAll() {
   renderPosts();
 }
 
+const emailTrigger = document.querySelector(".email-trigger");
+const emailPanel = document.querySelector("#email-panel");
+const emailFeedback = document.querySelector(".email-feedback");
+const copyEmailButton = document.querySelector(".copy-email");
+
+function setEmailPanel(open) {
+  emailPanel.hidden = !open;
+  emailTrigger.setAttribute("aria-expanded", String(open));
+  if (!open) emailFeedback.textContent = "";
+}
+
+emailTrigger.addEventListener("click", () => {
+  setEmailPanel(emailPanel.hidden);
+});
+
+copyEmailButton.addEventListener("click", async () => {
+  try {
+    if (navigator.clipboard?.writeText) {
+      try {
+        await navigator.clipboard.writeText(emailAddress);
+      } catch {
+        copyEmailWithSelection();
+      }
+    } else {
+      copyEmailWithSelection();
+    }
+    emailFeedback.textContent = t("links.copyDone");
+    window.setTimeout(() => {
+      emailFeedback.textContent = "";
+    }, 1800);
+  } catch {
+    emailFeedback.textContent = emailAddress;
+  }
+});
+
+function copyEmailWithSelection() {
+  const textarea = document.createElement("textarea");
+  textarea.value = emailAddress;
+  textarea.setAttribute("readonly", "");
+  textarea.style.position = "fixed";
+  textarea.style.opacity = "0";
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  textarea.remove();
+}
+
 document.querySelectorAll("[data-lang]").forEach((button) => {
   button.classList.toggle("active", button.dataset.lang === currentLang);
   button.addEventListener("click", () => {
     currentLang = button.dataset.lang;
     document.querySelectorAll("[data-lang]").forEach((item) => item.classList.toggle("active", item === button));
+    setEmailPanel(false);
     renderAll();
   });
 });
@@ -691,6 +780,19 @@ mobileNav.addEventListener("click", (event) => {
     mobileNav.classList.remove("open");
     menuButton.setAttribute("aria-expanded", "false");
   }
+});
+
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const hash = link.getAttribute("href");
+    if (!hash || hash === "#") return;
+    const target = document.querySelector(hash);
+    if (!target) return;
+    event.preventDefault();
+    const targetTop = target.getBoundingClientRect().top + window.scrollY - 24;
+    window.scrollTo({ top: targetTop, behavior: "auto" });
+    history.pushState(null, "", hash);
+  });
 });
 
 function initConstellation() {
