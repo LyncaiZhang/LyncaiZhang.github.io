@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A bilingual academic homepage framework for a doctoral researcher."
+    />
+    <title>Lingkai Zhang | Academic Homepage</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="constellation" aria-hidden="true"></canvas>
+
+    <header class="mobile-bar">
+      <a class="brand" href="#top" data-i18n="site.shortName">Lingkai Zhang</a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav">
+        Menu
+      </button>
+    </header>
+
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#status" data-i18n="nav.status">Status</a>
+      <a href="#research" data-i18n="nav.research">研究</a>
+      <a href="#publications" data-i18n="nav.publications">成果</a>
+      <a href="#writing" data-i18n="nav.writing">写作</a>
+      <a href="#contact" data-i18n="nav.contact">合作</a>
+    </nav>
+
+    <main id="top" class="page-shell">
+      <aside class="profile-panel" aria-label="Profile">
+        <div class="profile-card">
+          <div class="avatar">
+            <img src="assets/avatar.jpg" alt="Lingkai Zhang 张凌恺" />
+          </div>
+          <p class="eyebrow" data-i18n="profile.role">Doctoral Researcher</p>
+          <h1 data-i18n="profile.name">Lingkai Zhang</h1>
+          <p class="name-cn" data-i18n="profile.nameCn">张凌恺</p>
+          <p class="affiliation" data-i18n="profile.affiliation">
+            Shanghai International College of Intellectual Property, Tongji University
+          </p>
+          <p class="profile-note" data-i18n="profile.note">
+            Intellectual property management, patent intelligence, and technology transfer.
+          </p>
+
+          <div class="profile-actions" aria-label="Academic links">
+            <a href="mailto:jamelingcan@foxmail.com" data-i18n="links.email">Email</a>
+            <a href="https://github.com/LyncaiZhang" data-i18n="links.github">GitHub</a>
+            <a href="https://orcid.org/0000-0001-5621-4479" data-i18n="links.orcid">ORCID</a>
+            <a href="#" data-i18n="links.scholar">Scholar Soon</a>
+            <a href="#" data-i18n="links.linkedin">LinkedIn Soon</a>
+            <a href="#" data-i18n="links.cv">CV Soon</a>
+          </div>
+
+          <div class="language-switch" aria-label="Language switch">
+            <button class="active" type="button" data-lang="zh">中文</button>
+            <button type="button" data-lang="en">EN</button>
+          </div>
+        </div>
+
+        <nav class="side-nav" aria-label="Primary navigation">
+          <a href="#about" data-i18n="nav.about">About</a>
+          <a href="#status" data-i18n="nav.status">Status</a>
+          <a href="#research" data-i18n="nav.research">研究</a>
+          <a href="#publications" data-i18n="nav.publications">成果</a>
+          <a href="#writing" data-i18n="nav.writing">写作</a>
+          <a href="#contact" data-i18n="nav.contact">合作</a>
+        </nav>
+      </aside>
+
+      <section class="content-column">
+        <section id="about" class="hero-section section-block">
+          <p class="eyebrow" data-i18n="hero.kicker">Minimal Academic Website</p>
+          <h2 data-i18n="hero.title">
+            用清晰、克制、有科技感的方式展示你的研究世界。
+          </h2>
+          <p class="hero-copy" data-i18n="hero.copy">
+            这里适合放一句高密度简介：你的研究对象、理论兴趣、方法能力，以及你希望与谁合作。
+          </p>
+          <div class="hero-grid" aria-label="Research summary">
+            <div>
+              <span data-i18n="stats.fieldLabel">Research Field</span>
+              <strong data-i18n="stats.field">Intellectual Property Management</strong>
+            </div>
+            <div>
+              <span data-i18n="stats.methodLabel">Methods</span>
+              <strong data-i18n="stats.method">fsQCA / NLP / Case Study</strong>
+            </div>
+            <div>
+              <span data-i18n="stats.openLabel">Open To</span>
+              <strong data-i18n="stats.open">Collaboration</strong>
+            </div>
+          </div>
+        </section>
+
+        <section id="status" class="section-block">
+          <div class="section-heading">
+            <p class="eyebrow" data-i18n="status.kicker">Academic Status</p>
+            <h2 data-i18n="status.title">Doctoral Progress</h2>
+            <p data-i18n="status.copy">
+              Current training, coursework, and dissertation progress.
+            </p>
+          </div>
+          <div id="status-list" class="status-grid"></div>
+        </section>
+
+        <section class="section-block">
+          <div class="section-heading">
+            <p class="eyebrow" data-i18n="news.kicker">News</p>
+            <h2 data-i18n="news.title">最新动态</h2>
+          </div>
+          <div id="news-list" class="news-list"></div>
+          <button id="news-toggle" class="text-button" type="button" data-i18n="news.showMore">
+            查看更多
+          </button>
+        </section>
+
+        <section id="research" class="section-block">
+          <div class="section-heading">
+            <p class="eyebrow" data-i18n="research.kicker">Research Map</p>
+            <h2 data-i18n="research.title">研究领域</h2>
+            <p data-i18n="research.copy">
+              用少量主题卡片替代密集履历，让访问者迅速理解你的学术位置。
+            </p>
+          </div>
+          <div id="topic-grid" class="topic-grid"></div>
+        </section>
+
+        <section id="publications" class="section-block">
+          <div class="section-heading">
+            <p class="eyebrow" data-i18n="publications.kicker">Publications</p>
+            <h2 data-i18n="publications.title">代表性成果</h2>
+            <p data-i18n="publications.copy">
+              中文刊物、英文论文、工作论文都可以陈列。重点是给每项成果一个清楚的问题、方法和贡献。
+            </p>
+          </div>
+
+          <div class="filter-row" aria-label="Publication filters">
+            <button class="active" type="button" data-filter="all" data-i18n="filters.all">全部</button>
+            <button type="button" data-filter="featured" data-i18n="filters.featured">代表作</button>
+            <button type="button" data-filter="journal" data-i18n="filters.journal">期刊</button>
+            <button type="button" data-filter="thesis" data-i18n="filters.thesis">学位论文</button>
+          </div>
+
+          <div id="publication-list" class="publication-list"></div>
+        </section>
+
+        <section id="writing" class="section-block">
+          <div class="section-heading">
+            <p class="eyebrow" data-i18n="writing.kicker">Posts & Notes</p>
+            <h2 data-i18n="writing.title">研究札记</h2>
+            <p data-i18n="writing.copy">
+              像 Lilian Weng 那样，把主页同时变成长期思考的索引。博士阶段可先放读书笔记、方法笔记和研究随笔。
+            </p>
+          </div>
+          <div id="post-list" class="post-list"></div>
+          <div class="wechat-card">
+            <img src="assets/wechat-qrcode.jpg" alt="WeChat public account QR code" />
+            <div>
+              <h3 data-i18n="wechat.title">WeChat Notes</h3>
+              <p data-i18n="wechat.copy">
+                Scan the QR code to follow longer Chinese essays and research notes.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="section-block contact-section">
+          <div>
+            <p class="eyebrow" data-i18n="contact.kicker">Collaboration</p>
+            <h2 data-i18n="contact.title">寻找同行者</h2>
+            <p data-i18n="contact.copy">
+              如果你关注创新政策、组织战略、数字化转型或文本分析方法，欢迎联系我讨论合作。
+            </p>
+          </div>
+          <a class="primary-button" href="mailto:jamelingcan@foxmail.com" data-i18n="contact.button">
+            发起交流
+          </a>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
