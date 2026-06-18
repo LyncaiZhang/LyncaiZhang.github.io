@@ -7,7 +7,7 @@ const content = {
       research: "研究",
       publications: "成果",
       writing: "札记",
-      contact: "合作",
+      contact: "联系",
     },
     profile: {
       role: "知识产权学博士研究生",
@@ -35,8 +35,8 @@ const content = {
       field: "Intellectual Property Management",
       methodLabel: "Methods",
       method: "Patent Analytics / Bibliometrics / Network Analysis",
-      openLabel: "Open To",
-      open: "Academic Collaboration",
+      openLabel: "Motto",
+      open: "仰望星空，脚踏实地",
     },
     status: {
       kicker: "Timeline",
@@ -77,11 +77,11 @@ const content = {
       copy: "扫码关注公众号，后续用于发布中文研究札记、论文解读与学术成长记录。",
     },
     contact: {
-      kicker: "Collaboration",
-      title: "欢迎交流与合作",
+      kicker: "联系",
+      title: "联系我",
       copy:
         "如果你关注知识产权管理、大学技术转移、创新管理、专利情报、科学计量或产学研合作，欢迎通过邮件联系。",
-      button: "发起交流",
+      button: "发送邮件",
     },
   },
   en: {
@@ -92,7 +92,7 @@ const content = {
       research: "Research",
       publications: "Publications",
       writing: "Notes",
-      contact: "Collaborate",
+      contact: "Contact",
     },
     profile: {
       role: "Doctoral Researcher",
@@ -120,8 +120,8 @@ const content = {
       field: "Intellectual Property Management",
       methodLabel: "Methods",
       method: "Patent Analytics / Bibliometrics / Network Analysis",
-      openLabel: "Open To",
-      open: "Academic Collaboration",
+      openLabel: "Motto",
+      open: "Look up at the stars; keep your feet on the ground.",
     },
     status: {
       kicker: "Timeline",
@@ -163,11 +163,11 @@ const content = {
       copy: "Scan the QR code to follow longer Chinese essays, paper notes, and academic reflections.",
     },
     contact: {
-      kicker: "Collaboration",
-      title: "Looking for collaborators",
+      kicker: "Contact",
+      title: "Contact",
       copy:
-        "I welcome conversations with scholars and research groups working on intellectual property management, university technology transfer, innovation management, patent intelligence, scientometrics, and university-industry collaboration.",
-      button: "Start a conversation",
+        "Please feel free to email me about intellectual property management, university technology transfer, innovation management, patent intelligence, scientometrics, or university-industry collaboration.",
+      button: "Email me",
     },
   },
 };
@@ -513,7 +513,7 @@ data.en.publications = data.zh.publications.map((item) => ({
   cnTitle: item.title,
 }));
 
-let currentLang = "en";
+let currentLang = "zh";
 let showAllNews = false;
 let activeFilter = "all";
 

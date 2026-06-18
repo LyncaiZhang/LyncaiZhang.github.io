@@ -83,8 +83,7 @@ a {
 }
 
 .profile-panel {
-  position: sticky;
-  top: 32px;
+  position: static;
   align-self: start;
 }
 
@@ -99,15 +98,20 @@ a {
 
 .avatar {
   display: grid;
-  width: 104px;
-  height: 104px;
-  margin-bottom: 24px;
+  width: 132px;
+  height: 132px;
+  margin: -8px auto 20px;
   place-items: center;
   border: 1px solid rgba(34, 103, 255, 0.2);
   border-radius: 28px;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.65), rgba(34, 103, 255, 0.12)),
     repeating-linear-gradient(45deg, rgba(34, 103, 255, 0.12) 0 1px, transparent 1px 10px);
+}
+
+.profile-card > .eyebrow {
+  font-size: 13px;
+  text-align: center;
 }
 
 .avatar img {
@@ -619,10 +623,10 @@ h3 {
 
   .avatar {
     grid-row: span 4;
-    width: 80px;
-    height: 80px;
-    margin-bottom: 0;
-    border-radius: 22px;
+    width: 96px;
+    height: 96px;
+    margin: -4px 0 0;
+    border-radius: 24px;
   }
 
   .profile-actions,
