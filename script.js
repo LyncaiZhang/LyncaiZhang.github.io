@@ -3,7 +3,7 @@ const content = {
     site: { shortName: "Lingkai Zhang" },
     nav: {
       about: "关于",
-      status: "进展",
+      status: "时间线",
       research: "研究",
       publications: "成果",
       writing: "札记",
@@ -39,9 +39,9 @@ const content = {
       open: "Academic Collaboration",
     },
     status: {
-      kicker: "Academic Status",
-      title: "博士阶段与培养进展",
-      copy: "基于中文简历、博士课程表和中期考核材料整理。",
+      kicker: "Timeline",
+      title: "教育与工作经历",
+      copy: "从工程实践到知识产权管理研究的完整时间线。",
     },
     news: {
       kicker: "News",
@@ -88,7 +88,7 @@ const content = {
     site: { shortName: "Lingkai Zhang" },
     nav: {
       about: "About",
-      status: "Status",
+      status: "Timeline",
       research: "Research",
       publications: "Publications",
       writing: "Notes",
@@ -124,9 +124,9 @@ const content = {
       open: "Academic Collaboration",
     },
     status: {
-      kicker: "Academic Status",
-      title: "Doctoral Progress",
-      copy: "Prepared from the Chinese CV, doctoral course record, and mid-term review materials.",
+      kicker: "Timeline",
+      title: "Education & Professional Experience",
+      copy: "A compact timeline from engineering practice to doctoral research in intellectual property management.",
     },
     news: {
       kicker: "News",
@@ -176,22 +176,34 @@ const data = {
   zh: {
     status: [
       {
-        label: "身份",
+        label: "2024.09 - Present",
         title: "同济大学知识产权学博士研究生",
         body:
-          "2024 级，上海国际知识产权学院，导师常旭华。当前为博士二年级，研究方向为知识产权运营学。",
+          "上海国际知识产权学院，知识产权学专业，导师常旭华。当前为博士二年级，已完成课程学习、博士开题与中期综合考核，研究方向为知识产权运营学。",
       },
       {
-        label: "培养进展",
-        title: "已完成课程学习、开题与中期考核",
+        label: "2021.09 - 2024.06",
+        title: "上海应用技术大学硕士研究生",
         body:
-          "已完成学术英语写作、中国马克思主义与当代、知识产权法专题、知识产权经营专题、知识产权方法论、知识产权政策专题、国际知识产权治理专题等课程学习。",
+          "经济与管理学院，管理科学与工程专业，研究方向为技术创新与知识产权管理。硕士学位论文聚焦集成电路产业颠覆性技术识别与培育。",
       },
       {
-        label: "学位论文",
-        title: "明星科学家团队专利转化效能提升机制研究",
+        label: "2019.07 - 2020.04",
+        title: "紫光同创，芯片测试工程师",
         body:
-          "研究聚焦团队生命周期、合作网络、TTO 能力、外部生态与专利价值实现机制。",
+          "深圳。参与芯片测试相关工程工作，为后续关注专利情报、技术识别与集成电路产业研究积累产业理解。",
+      },
+      {
+        label: "2018.12 - 2019.06",
+        title: "比亚迪通信信号有限公司，通号集成工程师",
+        body:
+          "深圳。参与通信信号集成工程相关工作，形成对复杂技术系统、工程协同与产业场景的早期实践认识。",
+      },
+      {
+        label: "2018.01 - 2018.11",
+        title: "卡斯柯信号有限公司，通号集成工程师（实习）",
+        body:
+          "上海。参与轨道交通通信信号集成相关实习工作，积累工程项目协同与技术应用经验。",
       },
     ],
     news: [
@@ -390,22 +402,34 @@ const data = {
   en: {
     status: [
       {
-        label: "Identity",
+        label: "Sep 2024 - Present",
         title: "PhD Student in Intellectual Property, Tongji University",
         body:
-          "2024 cohort, Shanghai International College of Intellectual Property, supervised by Prof. Xuhua Chang. Currently in the second year of doctoral study, with a focus on intellectual property operation.",
+          "Shanghai International College of Intellectual Property, supervised by Prof. Xuhua Chang. Currently in the second year of doctoral study; completed coursework, dissertation proposal, and mid-term review. Research focus: intellectual property operation.",
       },
       {
-        label: "Training",
-        title: "Coursework, proposal, and mid-term review completed",
+        label: "Sep 2021 - Jun 2024",
+        title: "Master's Student, Shanghai Institute of Technology",
         body:
-          "Completed doctoral coursework including Academic English Writing III, Contemporary China and Marxism, Intellectual Property Law, IP Operation, IP Methodology, IP Policy, and International IP Governance.",
+          "School of Economics and Management, Management Science and Engineering. Research focus: technology innovation and intellectual property management; thesis on identifying and cultivating disruptive technologies in the IC industry.",
       },
       {
-        label: "Dissertation",
-        title: "Enhancing Patent Commercialization Efficiency of Star Scientist Teams",
+        label: "Jul 2019 - Apr 2020",
+        title: "Chip Test Engineer, Unigroup Tongchuang",
         body:
-          "The dissertation examines team lifecycle, inventor collaboration networks, TTO capabilities, external ecosystems, and patent value realization.",
+          "Shenzhen. Worked on chip testing-related engineering tasks, building early industry knowledge for later research on patent intelligence, technology identification, and integrated circuit innovation.",
+      },
+      {
+        label: "Dec 2018 - Jun 2019",
+        title: "Signaling Integration Engineer, BYD Communication Signal Co., Ltd.",
+        body:
+          "Shenzhen. Worked on communication signaling integration, gaining practical exposure to complex technical systems and engineering collaboration.",
+      },
+      {
+        label: "Jan 2018 - Nov 2018",
+        title: "Signaling Integration Engineer Intern, CASCO Signal Co., Ltd.",
+        body:
+          "Shanghai. Participated in rail transit signaling integration work and accumulated experience in engineering coordination and technology application.",
       },
     ],
     news: [
@@ -510,14 +534,31 @@ function publicationArtwork(index) {
   `;
 }
 
+function publicationThumb(item, index) {
+  if (item.image) {
+    return `<img src="${item.image}" alt="${item.title}" loading="lazy" />`;
+  }
+
+  const pdfLink = item.links.find((link) => link.href.endsWith(".pdf"));
+  if (!pdfLink) return publicationArtwork(index);
+
+  const imagePath = pdfLink.href
+    .replace("assets/papers/", "assets/paper-thumbs/")
+    .replace(".pdf", ".jpg");
+
+  return `<img src="${imagePath}" alt="${item.title}" loading="lazy" />`;
+}
+
 function renderStatus() {
   document.querySelector("#status-list").innerHTML = data[currentLang].status
     .map(
       (item) => `
         <article class="status-card">
-          <span>${item.label}</span>
-          <h3>${item.title}</h3>
-          <p>${item.body}</p>
+          <div class="timeline-date">${item.label}</div>
+          <div class="timeline-content">
+            <h3>${item.title}</h3>
+            <p>${item.body}</p>
+          </div>
         </article>
       `,
     )
@@ -562,7 +603,7 @@ function renderPublications() {
     .map(
       (item, index) => `
         <article class="publication-card">
-          <div class="publication-visual">${publicationArtwork(index)}</div>
+          <div class="publication-visual">${publicationThumb(item, index)}</div>
           <div class="publication-body">
             <span class="publication-meta">${item.venue}</span>
             <h3>${item.title}</h3>

@@ -10,6 +10,7 @@ This is a static personal academic homepage for Lingkai (Lyncai) Zhang 张凌恺
 - `assets/avatar.jpg`: profile photo.
 - `assets/wechat-qrcode.jpg`: WeChat public account QR code.
 - `assets/papers/`: PDF files linked from the publication cards.
+- `assets/paper-thumbs/`: publication thumbnail images shown on the left side of each publication card.
 
 ## Content Editing
 
@@ -23,6 +24,19 @@ Most editable content is in `script.js`:
 - `data.en.posts` and `data.zh.posts`: research note placeholders.
 
 The page defaults to English and provides a Chinese switch. Chinese names and Chinese publication titles are preserved for accurate identification.
+
+## Replacing Publication Images
+
+Each publication card shows a thumbnail from `assets/paper-thumbs/`. By default, the thumbnail file name matches the PDF file name:
+
+```text
+assets/papers/2026-basic-research-high-quality-patents.pdf
+assets/paper-thumbs/2026-basic-research-high-quality-patents.jpg
+```
+
+To replace a publication image, export or prepare a new `.jpg` image and overwrite the matching file in `assets/paper-thumbs/`.
+
+If you want one paper to use a completely different image path, add an `image` field to that publication item in `script.js`, then update `publicationThumb()` to read that field first.
 
 ## Fonts
 
