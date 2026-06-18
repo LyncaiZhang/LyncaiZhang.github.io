@@ -185,7 +185,7 @@ const data = {
         label: "2021.09 - 2024.06",
         title: "上海应用技术大学硕士研究生",
         body:
-          "经济与管理学院，管理科学与工程专业，研究方向为技术创新与知识产权管理。硕士学位论文聚焦集成电路产业颠覆性技术识别与培育。",
+          "管理科学与工程专业，研究方向为技术创新与知识产权管理。硕士学位论文聚焦集成电路产业颠覆性技术识别与培育。",
       },
       {
         label: "2019.07 - 2020.04",
@@ -204,6 +204,11 @@ const data = {
         title: "卡斯柯信号有限公司，通号集成工程师（实习）",
         body:
           "上海。参与轨道交通通信信号集成相关实习工作，积累工程项目协同与技术应用经验。",
+      },
+      {
+        label: "本科阶段",
+        title: "兰州交通大学本科生",
+        body: "通信工程专业。工程与通信技术训练为后续从事技术创新、专利情报和知识产权管理研究提供了技术背景。",
       },
     ],
     news: [
@@ -411,7 +416,7 @@ const data = {
         label: "Sep 2021 - Jun 2024",
         title: "Master's Student, Shanghai Institute of Technology",
         body:
-          "School of Economics and Management, Management Science and Engineering. Research focus: technology innovation and intellectual property management; thesis on identifying and cultivating disruptive technologies in the IC industry.",
+          "Major: Management Science and Engineering. Research focus: technology innovation and intellectual property management; thesis on identifying and cultivating disruptive technologies in the IC industry.",
       },
       {
         label: "Jul 2019 - Apr 2020",
@@ -430,6 +435,12 @@ const data = {
         title: "Signaling Integration Engineer Intern, CASCO Signal Co., Ltd.",
         body:
           "Shanghai. Participated in rail transit signaling integration work and accumulated experience in engineering coordination and technology application.",
+      },
+      {
+        label: "Undergraduate Study",
+        title: "Undergraduate Student, Lanzhou Jiaotong University",
+        body:
+          "Major: Communication Engineering. Training in engineering and communication technologies provides the technical foundation for later research in technology innovation, patent intelligence, and intellectual property management.",
       },
     ],
     news: [
