@@ -6,6 +6,7 @@ const content = {
       status: "时间线",
       research: "研究",
       publications: "成果",
+      working: "推进中",
       writing: "札记",
       contact: "联系",
     },
@@ -61,6 +62,11 @@ const content = {
       title: "论文与成果",
       copy: "中文刊物、学位论文与工作论文都可以陈列。重点是清楚呈现问题、方法和贡献。",
     },
+    working: {
+      kicker: "推进中的研究",
+      title: "Working Paper",
+      copy: "这里列出正在推进的研究主题，后续可逐步补充摘要、会议汇报、预印本或项目页。",
+    },
     filters: {
       all: "全部",
       featured: "代表作",
@@ -81,7 +87,7 @@ const content = {
       title: "一起合作吧！",
       copy:
         "如果你关注知识产权管理、大学技术转移、创新管理、专利情报、科学计量或产学研合作，欢迎通过邮件联系。",
-      email: "jamelincoln1012@foxmail.com",
+      email: "jamelincoln1012@gmail.com",
     },
   },
   en: {
@@ -91,6 +97,7 @@ const content = {
       status: "Timeline",
       research: "Research",
       publications: "Publications",
+      working: "Working Papers",
       writing: "Notes",
       contact: "Contact",
     },
@@ -148,6 +155,11 @@ const content = {
       copy:
         "Chinese publications are presented with English titles and contribution statements while preserving the original Chinese titles for accurate identification.",
     },
+    working: {
+      kicker: "Ongoing Research",
+      title: "Working Papers",
+      copy: "Selected research topics currently in progress. Abstracts, conference presentations, preprints, or project pages can be added later.",
+    },
     filters: {
       all: "All",
       featured: "Featured",
@@ -169,7 +181,7 @@ const content = {
       title: "Let's Collaborate!",
       copy:
         "Please feel free to email me about intellectual property management, university technology transfer, innovation management, patent intelligence, scientometrics, or university-industry collaboration.",
-      email: "jamelincoln1012@foxmail.com",
+      email: "jamelincoln1012@gmail.com",
     },
   },
 };
@@ -437,6 +449,10 @@ const data = {
         body: "记录博士论文框架、中文学术表达、英文摘要写作和混合方法研究设计的思考。",
       },
     ],
+    workingPapers: [
+      "研发要素跨境流动政策供给分析",
+      "全球高校专利转化效能提升的内部保障",
+    ],
   },
   en: {
     status: [
@@ -544,6 +560,10 @@ const data = {
         body: "Reflections on dissertation framing, Chinese-English academic expression, and mixed-method research design.",
       },
     ],
+    workingPapers: [
+      "Policy Supply Analysis of Cross-Border Flows of R&D Factors",
+      "Internal Safeguards for Improving Patent Commercialization Performance in Global Universities",
+    ],
   },
 };
 
@@ -557,7 +577,7 @@ data.en.publications = data.zh.publications.map(({ enSummary, ...item }) => ({
 let currentLang = "zh";
 let showAllNews = false;
 let activeFilter = "all";
-const emailAddress = "jamelincoln1012@foxmail.com";
+const emailAddress = "jamelincoln1012@gmail.com";
 
 const t = (path) => path.split(".").reduce((value, key) => value?.[key], content[currentLang]) || "";
 
@@ -674,6 +694,19 @@ function renderPublications() {
     .join("");
 }
 
+function renderWorkingPapers() {
+  document.querySelector("#working-paper-list").innerHTML = data[currentLang].workingPapers
+    .map(
+      (title) => `
+        <article class="working-paper-card">
+          <span>${t("working.kicker")}</span>
+          <h3>${title}</h3>
+        </article>
+      `,
+    )
+    .join("");
+}
+
 function renderPosts() {
   document.querySelector("#post-list").innerHTML = data[currentLang].posts
     .map(
@@ -694,6 +727,7 @@ function renderAll() {
   renderNews();
   renderTopics();
   renderPublications();
+  renderWorkingPapers();
   renderPosts();
 }
 
