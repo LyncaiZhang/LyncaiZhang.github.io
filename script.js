@@ -833,7 +833,10 @@ function initConstellation() {
   const canvas = document.querySelector("#constellation");
   const ctx = canvas.getContext("2d");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const glyphSet = ["/", "-", "_", "=", "+", "|", "<", ">", "~", ":", "*"];
   let points = [];
+  let glyphs = [];
+  let frame = 0;
 
   function resize() {
     const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
@@ -842,17 +845,78 @@ function initConstellation() {
     canvas.style.width = `${window.innerWidth}px`;
     canvas.style.height = `${window.innerHeight}px`;
     ctx.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
-    points = Array.from({ length: Math.min(72, Math.floor(window.innerWidth / 18)) }, () => ({
+    points = Array.from({ length: Math.min(84, Math.floor(window.innerWidth / 16)) }, () => ({
       x: Math.random() * window.innerWidth,
       y: Math.random() * window.innerHeight,
-      vx: (Math.random() - 0.5) * 0.18,
-      vy: (Math.random() - 0.5) * 0.18,
+      vx: (Math.random() - 0.5) * 0.22,
+      vy: (Math.random() - 0.5) * 0.22,
+      pulse: Math.random() * Math.PI * 2,
+    }));
+    glyphs = Array.from({ length: Math.min(42, Math.floor(window.innerWidth / 34)) }, () => ({
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * window.innerHeight,
+      speed: 0.08 + Math.random() * 0.18,
+      char: glyphSet[Math.floor(Math.random() * glyphSet.length)],
+      alpha: 0.08 + Math.random() * 0.12,
     }));
   }
 
+  function drawGrid() {
+    const gridSize = 52;
+    const offset = reduceMotion ? 0 : (frame * 0.18) % gridSize;
+    ctx.strokeStyle = "rgba(34, 103, 255, 0.045)";
+    ctx.lineWidth = 1;
+
+    for (let x = -gridSize + offset; x < window.innerWidth + gridSize; x += gridSize) {
+      ctx.beginPath();
+      ctx.moveTo(x, 0);
+      ctx.lineTo(x + window.innerHeight * 0.12, window.innerHeight);
+      ctx.stroke();
+    }
+
+    for (let y = -gridSize + offset; y < window.innerHeight + gridSize; y += gridSize) {
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(window.innerWidth, y + window.innerWidth * 0.04);
+      ctx.stroke();
+    }
+  }
+
+  function drawScanline() {
+    if (reduceMotion) return;
+    const y = (frame * 0.7) % (window.innerHeight + 180) - 90;
+    const gradient = ctx.createLinearGradient(0, y - 70, 0, y + 70);
+    gradient.addColorStop(0, "rgba(34, 103, 255, 0)");
+    gradient.addColorStop(0.5, "rgba(0, 168, 143, 0.08)");
+    gradient.addColorStop(1, "rgba(34, 103, 255, 0)");
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, y - 70, window.innerWidth, 140);
+  }
+
+  function drawGlyphs() {
+    ctx.font = "12px 'Times New Roman', monospace";
+    glyphs.forEach((glyph) => {
+      if (!reduceMotion) {
+        glyph.y += glyph.speed;
+        glyph.x += Math.sin((glyph.y + frame) * 0.01) * 0.05;
+      }
+      if (glyph.y > window.innerHeight + 18) {
+        glyph.y = -18;
+        glyph.x = Math.random() * window.innerWidth;
+        glyph.char = glyphSet[Math.floor(Math.random() * glyphSet.length)];
+      }
+      ctx.fillStyle = `rgba(17, 24, 39, ${glyph.alpha})`;
+      ctx.fillText(glyph.char, glyph.x, glyph.y);
+    });
+  }
+
   function draw() {
+    frame += 1;
     ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
-    ctx.fillStyle = "rgba(34, 103, 255, 0.32)";
+    drawGrid();
+    drawScanline();
+    drawGlyphs();
+    ctx.fillStyle = "rgba(34, 103, 255, 0.34)";
     ctx.strokeStyle = "rgba(34, 103, 255, 0.12)";
 
     points.forEach((point, index) => {
@@ -864,14 +928,14 @@ function initConstellation() {
       if (point.y < 0 || point.y > window.innerHeight) point.vy *= -1;
 
       ctx.beginPath();
-      ctx.arc(point.x, point.y, 1.4, 0, Math.PI * 2);
+      ctx.arc(point.x, point.y, 1.15 + Math.sin(frame * 0.025 + point.pulse) * 0.35, 0, Math.PI * 2);
       ctx.fill();
 
       for (let next = index + 1; next < points.length; next += 1) {
         const other = points[next];
         const distance = Math.hypot(point.x - other.x, point.y - other.y);
-        if (distance < 118) {
-          ctx.globalAlpha = 1 - distance / 118;
+        if (distance < 132) {
+          ctx.globalAlpha = (1 - distance / 132) * 0.9;
           ctx.beginPath();
           ctx.moveTo(point.x, point.y);
           ctx.lineTo(other.x, other.y);
