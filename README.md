@@ -2,11 +2,13 @@
 
 This is a static personal academic homepage for Lingkai (Lyncai) Zhang 张凌恺. It is designed for GitHub Pages and does not require a frontend build step.
 
+中文维护说明见 [`维护说明书.md`](维护说明书.md)。
+
 ## Files
 
 - `index.html`: page structure.
 - `styles.css`: layout, visual style, responsive rules, and font settings.
-- `script.js`: bilingual content, news, doctoral status, research interests, publications, and note entries.
+- `script.js`: bilingual content, news, timeline entries, research interests, publications, working papers, note entries, and the animated background.
 - `assets/avatar.jpg`: profile photo.
 - `assets/wechat-qrcode.jpg`: WeChat public account QR code.
 - `assets/papers/`: PDF files linked from the publication cards.
@@ -21,9 +23,10 @@ Most editable content is in `script.js`:
 - `data.en.news` and `data.zh.news`: recent updates. The homepage shows the first three by default.
 - `data.en.topics` and `data.zh.topics`: research interests.
 - `data.en.publications` and `data.zh.publications`: publication cards, contribution statements, and PDF links.
+- `data.en.workingPapers` and `data.zh.workingPapers`: ongoing working paper titles.
 - `data.en.posts` and `data.zh.posts`: research note placeholders.
 
-The page defaults to English and provides a Chinese switch. Chinese names and Chinese publication titles are preserved for accurate identification.
+The page defaults to Chinese and provides an English switch. Chinese names and Chinese publication titles are preserved for accurate identification.
 
 ## Replacing Publication Images
 
