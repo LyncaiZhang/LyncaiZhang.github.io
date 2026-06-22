@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,7 +9,7 @@
     />
     <title>Lingkai Zhang | Academic Homepage</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20260619-5" />
+    <link rel="stylesheet" href="styles.css?v=20260622-1" />
   </head>
   <body>
     <canvas id="constellation" aria-hidden="true"></canvas>
@@ -64,22 +64,22 @@
           </p>
 
           <div class="profile-actions" aria-label="Academic links">
-            <button class="link-pill email-trigger" type="button" aria-expanded="false" aria-controls="email-panel" data-i18n="links.email">邮箱</button>
+            <button class="link-pill email-trigger" type="button" aria-expanded="false" aria-controls="email-panel" data-i18n="links.email">Email</button>
             <a class="link-pill" href="https://github.com/LyncaiZhang" data-i18n="links.github">GitHub</a>
             <a class="link-pill" href="https://orcid.org/0000-0001-5621-4479" data-i18n="links.orcid">ORCID</a>
-            <a class="link-pill" href="#" data-i18n="links.scholar">谷歌学者待更新</a>
-            <a class="link-pill" href="#" data-i18n="links.linkedin">LinkedIn 待更新</a>
-            <a class="link-pill" href="#" data-i18n="links.cv">CV 待更新</a>
           </div>
           <div id="email-panel" class="email-panel" hidden>
             <span class="email-address">jamelincoln1012@gmail.com</span>
-            <button class="copy-email" type="button" data-i18n="links.copyEmail">复制邮箱</button>
+            <button class="copy-email" type="button" data-i18n="links.copyEmail">Copy email</button>
             <span class="email-feedback" aria-live="polite"></span>
           </div>
 
-          <div class="language-switch" aria-label="Language switch">
-            <button class="active" type="button" data-lang="zh">中文</button>
-            <button type="button" data-lang="en">EN</button>
+          <div class="language-panel" aria-label="Language selection">
+            <span class="language-hint" data-i18n="language.prompt">Choose language / 选择语言</span>
+            <div class="language-switch">
+              <button type="button" data-lang="zh">中文</button>
+              <button class="active" type="button" data-lang="en">EN</button>
+            </div>
           </div>
         </div>
 
@@ -215,6 +215,6 @@
       </section>
     </main>
 
-    <script src="script.js?v=20260619-5"></script>
+    <script src="script.js?v=20260622-1"></script>
   </body>
 </html>

@@ -294,19 +294,40 @@ h3 {
   font-weight: 800;
 }
 
+.language-panel {
+  display: grid;
+  gap: 8px;
+  width: max-content;
+  margin-top: 28px;
+  padding: 10px;
+  border: 1px solid rgba(34, 103, 255, 0.28);
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(34, 103, 255, 0.12), rgba(255, 255, 255, 0.86)),
+    rgba(255, 255, 255, 0.78);
+  box-shadow: 0 14px 34px rgba(34, 103, 255, 0.13);
+}
+
+.language-hint {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+}
+
 .language-switch {
   display: flex;
   gap: 6px;
   width: max-content;
-  margin-top: 24px;
   padding: 4px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(34, 103, 255, 0.2);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.84);
 }
 
 .language-switch button {
-  padding: 5px 12px;
+  min-width: 52px;
+  padding: 7px 14px;
   border: 0;
   cursor: pointer;
 }
@@ -770,7 +791,7 @@ h3 {
 
   .profile-actions,
   .email-panel,
-  .language-switch {
+  .language-panel {
     grid-column: 1 / -1;
   }
 

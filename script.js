@@ -21,11 +21,11 @@ const content = {
       email: "邮箱",
       copyEmail: "复制邮箱",
       copyDone: "已复制",
-      cv: "CV 待更新",
-      scholar: "谷歌学者待更新",
       github: "GitHub",
       orcid: "ORCID",
-      linkedin: "LinkedIn 待更新",
+    },
+    language: {
+      prompt: "语言选择 / Language",
     },
     hero: {
       kicker: "学术主页",
@@ -112,11 +112,11 @@ const content = {
       email: "Email",
       copyEmail: "Copy email",
       copyDone: "Copied",
-      cv: "CV Soon",
-      scholar: "Scholar Soon",
       github: "GitHub",
       orcid: "ORCID",
-      linkedin: "LinkedIn Soon",
+    },
+    language: {
+      prompt: "Choose language / 选择语言",
     },
     hero: {
       kicker: "Academic Homepage",
@@ -574,7 +574,7 @@ data.en.publications = data.zh.publications.map(({ enSummary, ...item }) => ({
   summary: enSummary || item.summary,
 }));
 
-let currentLang = "zh";
+let currentLang = "en";
 let showAllNews = false;
 let activeFilter = "all";
 const emailAddress = "jamelincoln1012@gmail.com";

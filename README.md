@@ -26,7 +26,7 @@ Most editable content is in `script.js`:
 - `data.en.workingPapers` and `data.zh.workingPapers`: ongoing working paper titles.
 - `data.en.posts` and `data.zh.posts`: research note placeholders.
 
-The page defaults to Chinese and provides an English switch. Chinese names and Chinese publication titles are preserved for accurate identification.
+The page defaults to English and provides a Chinese switch. Chinese names and Chinese publication titles are preserved for accurate identification.
 
 ## Replacing Publication Images
 
