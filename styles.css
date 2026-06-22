@@ -363,7 +363,7 @@ h3 {
 
 .content-column {
   display: grid;
-  gap: 40px;
+  gap: 30px;
   min-width: 0;
 }
 
@@ -372,10 +372,9 @@ h3 {
 }
 
 .hero-section {
-  min-height: 62vh;
   display: grid;
-  align-content: center;
-  padding: 30px 0 24px;
+  align-content: start;
+  padding: 20px 0 8px;
 }
 
 .hero-copy {
