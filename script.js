@@ -65,7 +65,7 @@ const content = {
     working: {
       kicker: "推进中的研究",
       title: "Working Paper",
-      copy: "这里列出正在推进的研究主题，后续可逐步补充摘要、会议汇报、预印本或项目页。",
+      copy: "",
     },
     filters: {
       all: "全部",
@@ -76,7 +76,7 @@ const content = {
     writing: {
       kicker: "研究札记",
       title: "研究札记",
-      copy: "俯仰无愧天地，褒贬自有春秋",
+      copy: "",
     },
     wechat: {
       title: "微信公众号",
@@ -158,7 +158,7 @@ const content = {
     working: {
       kicker: "Ongoing Research",
       title: "Working Papers",
-      copy: "Selected research topics currently in progress. Abstracts, conference presentations, preprints, or project pages can be added later.",
+      copy: "",
     },
     filters: {
       all: "All",
@@ -169,8 +169,7 @@ const content = {
     writing: {
       kicker: "Posts & Notes",
       title: "Research Notes",
-      copy:
-        "Live with a clear conscience before heaven and earth; let time judge praise and blame.",
+      copy: "",
     },
     wechat: {
       title: "WeChat Notes",
@@ -584,7 +583,9 @@ const t = (path) => path.split(".").reduce((value, key) => value?.[key], content
 function applyText() {
   document.documentElement.lang = currentLang === "zh" ? "zh-CN" : "en";
   document.querySelectorAll("[data-i18n]").forEach((node) => {
-    node.textContent = t(node.dataset.i18n);
+    const value = t(node.dataset.i18n);
+    node.textContent = value;
+    node.hidden = value === "";
   });
   document.querySelector("#news-toggle").textContent = showAllNews ? t("news.showLess") : t("news.showMore");
 }
