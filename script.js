@@ -279,6 +279,8 @@ const data = {
         cnTitle: "Has Basic Research in China Produced High-Quality Patents? Evidence from National Natural Science Foundation Funding",
         authors: "常旭华, 喻诚搏, <strong>张凌恺</strong>",
         venue: "科学学与科学技术管理 / 2026, 47(03): 85-103",
+        enAuthors: "Xuhua Chang, Chengbo Yu, <strong>Lingkai Zhang</strong>",
+        enVenue: "Science of Science and Management of S.&T. / 2026, 47(03): 85-103",
         type: "journal featured",
         summary:
           "基于国家自然科学基金资助项目关联发明专利，评估中国基础研究是否产出高质量专利，并讨论基础研究与专利质量之间的关系。",
@@ -291,6 +293,8 @@ const data = {
         cnTitle: "Research on the Theoretical Construction and Implementation Path of the Modernization of China's National Science and Technology Governance System",
         authors: "常旭华, <strong>张凌恺</strong>, 陈强",
         venue: "中国科技论坛 / 2026(01): 1-10",
+        enAuthors: "Xuhua Chang, <strong>Lingkai Zhang</strong>, Qiang Chen",
+        enVenue: "Forum on Science and Technology in China / 2026(01): 1-10",
         type: "journal featured",
         summary:
           "围绕发展、安全与责任构建国家科技治理体系现代化的理论框架，并提出实现路径。",
@@ -303,6 +307,8 @@ const data = {
         cnTitle: "Construction and Application of a Two-Stage Identification Model for Disruptive Technologies: A Case of Artificial Intelligence",
         authors: "孙珂, 江瑶, 陈旭, <strong>张凌恺</strong>",
         venue: "科技与经济 / 2026, 39(01)",
+        enAuthors: "Ke Sun, Yao Jiang, Xu Chen, <strong>Lingkai Zhang</strong>",
+        enVenue: "Science & Technology and Economy / 2026, 39(01)",
         type: "journal featured",
         summary:
           "基于专利数据构建两阶段识别模型，结合熵权法、K-means 聚类和三维可视化识别人工智能领域颠覆性技术主题。",
@@ -315,6 +321,8 @@ const data = {
         cnTitle: "Construction and Application of Two-Stage Quantitative Identification Model for Future Technology",
         authors: "江瑶, 吴宇凡, 陈旭, <strong>张凌恺</strong>",
         venue: "情报杂志 / 2025, 44(08): 127-135, 117",
+        enAuthors: "Yao Jiang, Yufan Wu, Xu Chen, <strong>Lingkai Zhang</strong>",
+        enVenue: "Journal of Intelligence / 2025, 44(08): 127-135, 117",
         type: "journal featured",
         summary:
           "结合专利筛选与 BTM 主题挖掘方法，识别量子信息领域未来技术主题。",
@@ -327,6 +335,8 @@ const data = {
         cnTitle: "Research on Identifying and Cultivating Disruptive Technologies in the IC Industry under the Mutation-Evolution Model",
         authors: "<strong>张凌恺</strong>",
         venue: "Master's Thesis, Shanghai Institute of Technology / 2024",
+        enAuthors: "<strong>Lingkai Zhang</strong>",
+        enVenue: "Master's Thesis, Shanghai Institute of Technology / 2024",
         type: "thesis featured",
         summary:
           "构建“突变—演化”模型，用于识别与培育集成电路产业中的颠覆性技术。",
@@ -339,6 +349,8 @@ const data = {
         cnTitle: "Construction and Application of the Bottleneck Technology Identification Model: A Case of the Industrial Software Industry",
         authors: "陈旭, 江瑶, 熊焰, <strong>张凌恺</strong>",
         venue: "情报杂志 / 2024, 43(04): 106-113, 95",
+        enAuthors: "Xu Chen, Yao Jiang, Yan Xiong, <strong>Lingkai Zhang</strong>",
+        enVenue: "Journal of Intelligence / 2024, 43(04): 106-113, 95",
         type: "journal",
         summary:
           "基于专利数据提出 V-G-M-B 框架，用于识别工业软件领域的“卡脖子”技术。",
@@ -351,6 +363,8 @@ const data = {
         cnTitle: "Construction of Future Technology Identification Model and Its Application: From the Perspective of Multidimensional Features",
         authors: "江瑶, 陈旭, <strong>张凌恺</strong>",
         venue: "情报杂志 / 2024, 43(07): 104-111, 137",
+        enAuthors: "Yao Jiang, Xu Chen, <strong>Lingkai Zhang</strong>",
+        enVenue: "Journal of Intelligence / 2024, 43(07): 104-111, 137",
         type: "journal",
         summary:
           "整合多维指标与博弈论组合赋权方法，识别芯片材料领域未来技术主题。",
@@ -363,6 +377,8 @@ const data = {
         cnTitle: "Disruptive Technology Identification Method and Application Based on the Mutation-Evolution Model",
         authors: "熊焰, <strong>张凌恺</strong>, 陈旭, 江瑶",
         venue: "情报杂志 / 2023, 42(12): 119-126, 152",
+        enAuthors: "Yan Xiong, <strong>Lingkai Zhang</strong>, Xu Chen, Yao Jiang",
+        enVenue: "Journal of Intelligence / 2023, 42(12): 119-126, 152",
         type: "journal",
         summary:
           "构建“突变—演化”模型，识别集成电路材料领域的颠覆性技术主题。",
@@ -375,6 +391,8 @@ const data = {
         cnTitle: "Research on Global Quantum Information Technology Development Trends Based on Patent Bibliometrics",
         authors: "江瑶, 陈旭, <strong>张凌恺</strong>",
         venue: "创新科技 / 2023, 23(11): 83-92",
+        enAuthors: "Yao Jiang, Xu Chen, <strong>Lingkai Zhang</strong>",
+        enVenue: "Innovation Science and Technology / 2023, 23(11): 83-92",
         type: "journal",
         summary:
           "通过专利计量、空间布局和合作网络分析，刻画全球量子信息技术发展态势。",
@@ -387,6 +405,8 @@ const data = {
         cnTitle: "Research on the Three-Stage Identification of Bottleneck Technologies from the Perspective of Patents",
         authors: "江瑶, 陈旭, <strong>张凌恺</strong>",
         venue: "情报杂志 / 2023, 42(10): 132-139, 55",
+        enAuthors: "Yao Jiang, Xu Chen, <strong>Lingkai Zhang</strong>",
+        enVenue: "Journal of Intelligence / 2023, 42(10): 132-139, 55",
         type: "journal",
         summary:
           "从专利视角提出三阶段定量模型，用于识别关键核心技术中的“卡脖子”问题。",
@@ -399,6 +419,8 @@ const data = {
         cnTitle: "Three-Stage Identification of Bottleneck Technologies from the Perspective of Patents: A Case of Chip Materials",
         authors: "江瑶, 陈旭, <strong>张凌恺</strong>",
         venue: "情报杂志 / Online First, 2023",
+        enAuthors: "Yao Jiang, Xu Chen, <strong>Lingkai Zhang</strong>",
+        enVenue: "Journal of Intelligence / Online First, 2023",
         type: "journal",
         summary:
           "将三阶段专利识别模型应用于芯片材料领域，识别相关“卡脖子”技术。",
@@ -411,6 +433,8 @@ const data = {
         cnTitle: "Identification and Application of Bottleneck Issues in Key Core Technologies: Taking AI Chips as an Example",
         authors: "陈旭, 江瑶, 熊焰, <strong>张凌恺</strong>",
         venue: "中国科技论坛 / 2023(09): 17-27",
+        enAuthors: "Xu Chen, Yao Jiang, Yan Xiong, <strong>Lingkai Zhang</strong>",
+        enVenue: "Forum on Science and Technology in China / 2023(09): 17-27",
         type: "journal",
         summary:
           "结合定量与定性方法，识别 AI 芯片关键核心技术中的“卡脖子”问题。",
@@ -423,6 +447,8 @@ const data = {
         cnTitle: "Identification and Analysis of Bottleneck Problems in Key Core Technologies Based on Patent Dimensions: A Case of the Integrated Circuit Industry",
         authors: "陈旭, 江瑶, 熊焰, <strong>张凌恺</strong>",
         venue: "情报杂志 / 2023, 42(08): 83-89, 19",
+        enAuthors: "Xu Chen, Yao Jiang, Yan Xiong, <strong>Lingkai Zhang</strong>",
+        enVenue: "Journal of Intelligence / 2023, 42(08): 83-89, 19",
         type: "journal",
         summary:
           "基于专利指标构建两阶段金字塔模型，用于识别集成电路产业关键核心技术“卡脖子”问题。",
@@ -566,10 +592,12 @@ const data = {
   },
 };
 
-data.en.publications = data.zh.publications.map(({ enSummary, ...item }) => ({
+data.en.publications = data.zh.publications.map(({ enSummary, enAuthors, enVenue, ...item }) => ({
   ...item,
   title: item.cnTitle,
   cnTitle: item.title,
+  authors: enAuthors || item.authors,
+  venue: enVenue || item.venue,
   summary: enSummary || item.summary,
 }));
 
