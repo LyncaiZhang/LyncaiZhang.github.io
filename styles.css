@@ -382,6 +382,41 @@ h3 {
   font-size: 19px;
 }
 
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 780px;
+  margin-top: 18px;
+}
+
+.hero-tags span {
+  position: relative;
+  padding: 8px 12px 8px 28px;
+  border: 1px solid rgba(34, 103, 255, 0.22);
+  border-radius: 999px;
+  background:
+    linear-gradient(135deg, rgba(34, 103, 255, 0.09), rgba(0, 168, 143, 0.07)),
+    rgba(255, 255, 255, 0.72);
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 800;
+  box-shadow: 0 10px 26px rgba(34, 103, 255, 0.08);
+}
+
+.hero-tags span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--mint));
+  transform: translateY(-50%);
+  box-shadow: 0 0 0 4px rgba(34, 103, 255, 0.1);
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

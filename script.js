@@ -33,6 +33,11 @@ const content = {
       copy:
         "本人为知识产权管理方向博士研究生，研究聚焦明星科学家团队专利转化效能提升机制，关注科研声誉、团队网络、技术转移组织与创新生态如何共同影响高校专利的价值实现。",
     },
+    highlights: {
+      interdisciplinary: "跨学科教育背景：工科 × 商科 × 知识产权",
+      global: "多国交流学习：德国、奥地利、瑞士",
+      adaptive: "新兴技术快速上手：集成电路、人工智能、智能体",
+    },
     stats: {
       fieldLabel: "研究领域",
       field: "知识产权管理",
@@ -123,6 +128,11 @@ const content = {
       title: "Lingkai (Lyncai) Zhang 张凌恺",
       copy:
         "I am a doctoral researcher in intellectual property management. My research focuses on mechanisms for enhancing the patent commercialization efficiency of star scientist teams, with attention to scientific reputation, team networks, technology transfer organizations, and innovation ecosystems.",
+    },
+    highlights: {
+      interdisciplinary: "Interdisciplinary training: engineering, business, and intellectual property",
+      global: "International learning experience: Germany, Austria, and Switzerland",
+      adaptive: "Fast learning in emerging technologies: integrated circuits, AI, and agents",
     },
     stats: {
       fieldLabel: "Research Field",
@@ -223,6 +233,12 @@ const data = {
         title: "卡斯柯信号有限公司，通号集成工程师（实习）",
         body:
           "上海。参与轨道交通通信信号集成相关实习工作，积累工程项目协同与技术应用经验。",
+      },
+      {
+        label: "2016.06 - 2016.10",
+        title: "德国帕绍大学交流学习",
+        body:
+          "德国帕绍。围绕德语、工业工程、欧洲文化与历史等课程开展交流学习，拓展跨文化理解与工程管理视角。",
       },
       {
         label: "本科阶段",
@@ -516,6 +532,12 @@ const data = {
         title: "Signaling Integration Engineer Intern, CASCO Signal Co., Ltd.",
         body:
           "Shanghai. Participated in rail transit signaling integration work and accumulated experience in engineering coordination and technology application.",
+      },
+      {
+        label: "Jun 2016 - Oct 2016",
+        title: "Exchange Study, University of Passau",
+        body:
+          "Passau, Germany. Studied German language, industrial engineering, European culture and history, broadening cross-cultural understanding and engineering management perspectives.",
       },
       {
         label: "Undergraduate Study",
