@@ -34,9 +34,12 @@ const content = {
         "本人为知识产权管理方向博士研究生，研究聚焦明星科学家团队专利转化效能提升机制，关注科研声誉、团队网络、技术转移组织与创新生态如何共同影响高校专利的价值实现。",
     },
     highlights: {
-      interdisciplinary: "跨学科教育背景：工科 × 商科 × 知识产权",
-      global: "多国交流学习：德国、奥地利、瑞士",
-      adaptive: "新兴技术快速上手：集成电路、人工智能、智能体",
+      interdisciplinaryTitle: "跨学科教育背景",
+      interdisciplinaryBody: "工科、商科与知识产权交叉训练",
+      globalTitle: "多国交流学习经历",
+      globalBody: "德国、奥地利、瑞士等欧洲学习观察",
+      adaptiveTitle: "新兴技术快速上手",
+      adaptiveBody: "集成电路、人工智能与智能体等技术主题",
     },
     stats: {
       fieldLabel: "研究领域",
@@ -130,9 +133,12 @@ const content = {
         "I am a doctoral researcher in intellectual property management. My research focuses on mechanisms for enhancing the patent commercialization efficiency of star scientist teams, with attention to scientific reputation, team networks, technology transfer organizations, and innovation ecosystems.",
     },
     highlights: {
-      interdisciplinary: "Interdisciplinary training: engineering, business, and intellectual property",
-      global: "International learning experience: Germany, Austria, and Switzerland",
-      adaptive: "Fast learning in emerging technologies: integrated circuits, AI, and agents",
+      interdisciplinaryTitle: "Interdisciplinary Training",
+      interdisciplinaryBody: "Engineering, business, and intellectual property",
+      globalTitle: "International Learning",
+      globalBody: "Germany, Austria, Switzerland, and European contexts",
+      adaptiveTitle: "Fast Technology Learning",
+      adaptiveBody: "Integrated circuits, AI, and agent technologies",
     },
     stats: {
       fieldLabel: "Research Field",
@@ -236,9 +242,9 @@ const data = {
       },
       {
         label: "2016.06 - 2016.10",
-        title: "德国帕绍大学交流学习",
+        title: "德国 Universität Passau 交流学习",
         body:
-          "德国帕绍。围绕德语、工业工程、欧洲文化与历史等课程开展交流学习，拓展跨文化理解与工程管理视角。",
+          "德国帕绍。围绕德语（Deutsch）、工业工程（Wirtschaftsingenieurwesen）、欧洲文化与历史等课程开展交流学习，拓展跨文化理解与工程管理视角。",
       },
       {
         label: "本科阶段",
@@ -535,9 +541,9 @@ const data = {
       },
       {
         label: "Jun 2016 - Oct 2016",
-        title: "Exchange Study, University of Passau",
+        title: "Exchange Study, Universität Passau",
         body:
-          "Passau, Germany. Studied German language, industrial engineering, European culture and history, broadening cross-cultural understanding and engineering management perspectives.",
+          "Passau, Germany. Studied Deutsch, Wirtschaftsingenieurwesen, European culture and history, broadening cross-cultural understanding and engineering management perspectives.",
       },
       {
         label: "Undergraduate Study",
